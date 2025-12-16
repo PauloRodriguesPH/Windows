@@ -39,7 +39,7 @@ Esvazia, de forma **simples e eficiente**, as filas de impressão do **servidor 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope Process
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Scripts\Clear-PrintQueues_Diario.ps1"
-``
+```
 
 4. Verifique o log gerado em:
 `C:\Scripts\Logs\QueueClear_YYYYMMDD_HHMMSS.log`
@@ -54,4 +54,4 @@ $trigger  = New-ScheduledTaskTrigger -Daily -At 01:00
 $principal= New-ScheduledTaskPrincipal -UserId 'SYSTEM' -LogonType ServiceAccount -RunLevel Highest
 
 Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Principal $principal -Description 'Limpa filas de impressão e gera log diário por execução'
-``
+```
