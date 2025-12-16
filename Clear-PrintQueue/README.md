@@ -30,17 +30,20 @@ Esvazia, de forma **simples e eficiente**, as filas de impressão do **servidor 
 ## 🛠 Instalação
 
 1. Crie a pasta:
--  C:\Scripts
+-  `C:\Scripts`
+
 2. Salve:
 - `C:\Scripts\Clear-PrintQueues_Diario.ps1`
+  
 3. Na primeira execução interativa:
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope Process
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Scripts\Clear-PrintQueues_Diario.ps1"
-```powershell
+``
 
 4. Verifique o log gerado em:
-C:\Scripts\Logs\QueueClear_YYYYMMDD_HHMMSS.log
+`C:\Scripts\Logs\QueueClear_YYYYMMDD_HHMMSS.log`
+
 5. Crie a tarefa no agendador de tarefas
 ```powershell
 $taskName = 'LimparFilas_Diario'
