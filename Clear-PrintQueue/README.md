@@ -37,6 +37,7 @@ Esvazia, de forma **simples e eficiente**, as filas de impressão do **servidor 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope Process
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Scripts\Clear-PrintQueues_Diario.ps1"
+```powershell
 
 4. Verifique o log gerado em:
 C:\Scripts\Logs\QueueClear_YYYYMMDD_HHMMSS.log
