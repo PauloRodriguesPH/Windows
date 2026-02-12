@@ -1,4 +1,25 @@
-# Salvar script em .ps1 e executar como administrador
+#############################################################
+# GUIA DE REFERÊNCIA – DESATIVAR OFFLINE FILES (CSC)        #
+#############################################################
+
+<#
+Autor: Paulo Henrique da Silva Motta Rodrigues
+Sistema: Windows (Desktop / Server)
+Recurso: Offline Files (Client Side Caching - CSC)
+Data do teste: 08/01/2026
+
+Uso:
+- Script para desativar completamente o recurso Offline Files
+- Aplica configurações via WMI, Registro e Serviço
+- Pode ser usado em troubleshooting ou padronização de ambiente
+
+Observações:
+- Executar como Administrador
+- Requer reinicialização para aplicar todas as mudanças
+- Script pode ser usado como referência (copiar/colar conforme necessidade) ou pode salvar como ps1 e executar completo.
+#>
+
+
 # 1) Desativar via WMI
 ([WmiClass]'Win32_OfflineFilesCache').Enable($false)
 
